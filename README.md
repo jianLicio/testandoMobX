@@ -5,7 +5,10 @@ Projeto com objetivo de conhecer mais o mobX, com o Prof. Dr. Everton Coimbra de
 ## Sobre o Autor
 
 Jian Licio de Oliveira, estudante de Ciências da Computação pela UTFPR, amante da tecnologia.  
-Desenvolvedor Mobile - Flutter <3
+Desenvolvedor Mobile - Flutter <3  
+
+- [Git Hub](https://github.com/jianLicio)
+
 # Créditos
 
 - [Prof. Dr. Everton Coimbra de Araujo](https://linktr.ee/evertoncoimbradearaujo)
