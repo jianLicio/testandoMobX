@@ -1,16 +1,12 @@
 # testando_mobx
 
-A new Flutter project.
+Projeto com objetivo de conhecer mais o mobX, com o Prof. Dr. Everton Coimbra de Araujo
 
-## Getting Started
+## Sobre o Autor
 
-This project is a starting point for a Flutter application.
+Jian Licio de Oliveira, estudante de Ciências da Computação pela UTFPR, amante da tecnologia.  
+Desenvolvedor Mobile - Flutter <3
+# Créditos
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Prof. Dr. Everton Coimbra de Araujo](https://linktr.ee/evertoncoimbradearaujo)
+- [Curdo de Referência](https://www.youtube.com/playlist?list=PLBoF7z0kJIegMpKOuFU0JPoi81ljY1uoT)
