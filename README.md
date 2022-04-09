@@ -12,4 +12,4 @@ Desenvolvedor Mobile - Flutter <3
 # Créditos
 
 - [Prof. Dr. Everton Coimbra de Araujo](https://linktr.ee/evertoncoimbradearaujo)
-- [Curdo de Referência](https://www.youtube.com/playlist?list=PLBoF7z0kJIegMpKOuFU0JPoi81ljY1uoT)
+- [Curso de Referência](https://www.youtube.com/playlist?list=PLBoF7z0kJIegMpKOuFU0JPoi81ljY1uoT)
