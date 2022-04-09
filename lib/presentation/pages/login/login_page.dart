@@ -4,21 +4,12 @@ import 'package:testando_mobx/presentation/pages/home/home_page.dart';
 import 'package:testando_mobx/presentation/pages/login/mobx/login_page_mobx.dart';
 
 class LoginPage extends StatelessWidget {
-//   const LoginPage({Key? key}) : super(key: key);
   LoginPage({Key? key}) : super(key: key);
 
-//   @override
-//   State<LoginPage> createState() => _LoginPageState();
-// // }
-
-// class _LoginPageState extends State<LoginPage> {
   final FocusNode _emailNode = FocusNode();
   final FocusNode _senhaNode = FocusNode();
   final _loginPageMobx = LoginPageMobx();
   final _senhaPageMobx = LoginPageMobx();
-
-  // String _email = '';
-  // String _senha = '';
 
   _mensagemDeErro(String mensagem) {
     return Row(
