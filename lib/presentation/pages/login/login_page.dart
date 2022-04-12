@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:testando_mobx/presentation/pages/home/home_page.dart';
-import 'package:testando_mobx/presentation/pages/login/mobx/login_page_mobx.dart';
+import 'package:testando_mobx/presentation/pages/login/stores/login_page_store.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
   final FocusNode _emailNode = FocusNode();
   final FocusNode _senhaNode = FocusNode();
-  final _loginPageMobx = LoginPageMobx();
-  final _senhaPageMobx = LoginPageMobx();
+  final _loginPageStore = LoginPageStore();
 
   _mensagemDeErro(String mensagem) {
     return Row(
@@ -27,24 +26,8 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  _senhaEhValida() {
-    return _senhaPageMobx.senha.value.trim().isNotEmpty;
-  }
-
-  _emailEhValido() {
-    if (_loginPageMobx.email.value.trim().isEmpty) {
-      return false;
-    }
-
-    Pattern pattern =
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+";
-
-    final RegExp regex = RegExp(pattern as String);
-    return regex.hasMatch(_loginPageMobx.email.value);
-  }
-
   _onPressedParaBotaoAcessar({BuildContext? context}) {
-    if (_emailEhValido() && _senhaEhValida()) {
+    if (_loginPageStore.oEmailEhValido) {
       return () => Navigator.push(
             context!,
             MaterialPageRoute(
@@ -73,7 +56,7 @@ class LoginPage extends StatelessWidget {
               textInputAction: TextInputAction.next,
               onSubmitted: (_) =>
                   FocusScope.of(context).requestFocus(_senhaNode),
-              onChanged: (valor) => _loginPageMobx.atualizarEmail!([valor]),
+              onChanged: (valor) => _loginPageStore.atualizarEmail(valor),
               decoration: const InputDecoration(
                 prefix: Icon(Icons.email),
                 hintText: "Informe o email",
@@ -82,7 +65,7 @@ class LoginPage extends StatelessWidget {
             Observer(
               builder: (_) {
                 return Visibility(
-                  visible: !_emailEhValido(),
+                  visible: !_loginPageStore.oEmailEhValido,
                   child: _mensagemDeErro("Email Necessário"),
                 );
               },
@@ -90,7 +73,7 @@ class LoginPage extends StatelessWidget {
             TextField(
               keyboardType: TextInputType.text,
               focusNode: _senhaNode,
-              onChanged: (valor) => _senhaPageMobx.atualizarSenha!([valor]),
+              onChanged: (valor) => _loginPageStore.atualizarSenha(valor),
               decoration: const InputDecoration(
                 prefix: Icon(Icons.security),
                 hintText: "Informe a senha",
@@ -99,7 +82,7 @@ class LoginPage extends StatelessWidget {
             Observer(
               builder: (_) {
                 return Visibility(
-                  visible: !_senhaEhValida(),
+                  visible: !_loginPageStore.aSenhaEhValida,
                   child: _mensagemDeErro("Senha Necessária"),
                 );
               },
