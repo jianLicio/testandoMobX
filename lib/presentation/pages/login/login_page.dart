@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
   }
 
   _onPressedParaBotaoAcessar({BuildContext? context}) {
-    if (_loginPageStore.oEmailEhValido) {
+    if (_loginPageStore.oFormularioEhValido) {
       return () => Navigator.push(
             context!,
             MaterialPageRoute(
