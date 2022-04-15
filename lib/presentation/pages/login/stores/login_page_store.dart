@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
-//flutter packages pub run build_runner buil
+//flutter packages pub run build_runner build
 part 'login_page_store.g.dart';
 
 class LoginPageStore = _LoginPageStore with _$LoginPageStore;
